@@ -8,11 +8,12 @@ using CsvHelper;
 using CsvHelper.Configuration;
 using CsvHelper.TypeConversion;
 using PerfRoleGraphing.Models;
+using PerfRoleGraphing.Models.ClassMaps;
 
 
 namespace PerfRoleGraphing.CSVManagement
 {
-    public class FileReader
+    internal class RecordSelector
     {
         private string _filepath;
         /// <summary>
@@ -30,14 +31,20 @@ namespace PerfRoleGraphing.CSVManagement
                 }
             }
         }
-        public FileReader(string filePath) { _filepath = filePath; }
+        public RecordSelector(string filePath) { _filepath = filePath; }
         public IEnumerable<PerfRecordItem> GetTotalProcessorTime()
         {
-            return GetFullTestRecords<TotalProcMap>();
+            return GetFullTestRecords<TotalProcessClassMap>();
         }
         public IEnumerable<PerfRecordItem> GetCommittedMemoryBytes()
-        {
-            return GetFullTestRecords<ComBytesClassMap>();
+        {            
+            var records =  GetFullTestRecords<ComBytesClassMap>();
+           
+            foreach(var rec in records)
+            {
+                rec.Value /= 1000000.0;
+            }
+            return records;
         }
     }
 }

@@ -70,14 +70,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Charting\PerfChart.cs" />
-    <Compile Include="CSVManagement\FileReader.cs" />
-    <Compile Include="FileProcessor.cs" />
-    <Compile Include="Models\ComBytesClassMap.cs" />
+    <Compile Include="Models\PerfChart.cs" />
+    <Compile Include="ChartMaker.cs" />
+    <Compile Include="CSVManagement\RecordSelector.cs" />
+    <Compile Include="Models\ChartConfiguration.cs" />
+    <Compile Include="Models\ClassMaps\ComBytesClassMap.cs" />
     <Compile Include="Models\PerfRecordItem.cs" />
     <Compile Include="Models\PerfRecordMap.cs" />
-    <Compile Include="Models\ProcessorTimeStamp.cs" />
-    <Compile Include="Models\TotalProcMap.cs" />
+    <Compile Include="Models\ClassMaps\TotalProcessClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

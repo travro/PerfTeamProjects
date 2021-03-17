@@ -8,7 +8,7 @@ using CsvHelper.TypeConversion;
 
 namespace PerfRoleGraphing.Models
 {
-    public abstract class PerfRecordMap : ClassMap<PerfRecordItem>
+    internal abstract class PerfRecordMap : ClassMap<PerfRecordItem>
     {
         public PerfRecordMap(int index)
         {

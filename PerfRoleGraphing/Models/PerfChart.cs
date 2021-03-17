@@ -8,35 +8,37 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing;
 using System.IO;
 
-namespace PerfRoleGraphing.Charting
+namespace PerfRoleGraphing.Models
 {
-    public class PerfChart
+    internal class PerfChart
     {
-        private Chart _chart = new Chart();
-
-        public PerfChart(IEnumerable<PerfRecordItem> records, string role, string yAxisTitle, int fullLoadTime = 0)
+        private ChartConfiguration _chartConfig;
+        private Chart _chart;
+        public PerfChart(ChartConfiguration configuration, IEnumerable<PerfRecordItem> records)
         {
+            _chartConfig = configuration;
+            _chart = new Chart();
+
             var font = new Font("Arial", 14, FontStyle.Bold);
             _chart.ClientSize = new Size(1900, 800);
 
-            var titleText = $"{role} at Highest Concurrency";
+            var titleText = $"{_chartConfig.Role} at Highest Concurrency";
 
             var title = new Title()
             {
-                Text = (fullLoadTime != 0) ? titleText + $"for {fullLoadTime} minutes" : titleText,
+                Text = (_chartConfig.FullLoadTime > 0) ? $"{titleText} for {_chartConfig.FullLoadTime} minutes" : titleText,
                 Font = font
             };
             _chart.Titles.Add(title);
 
             var chartArea = new ChartArea();    
             chartArea.AxisX.TitleFont = font;
-            chartArea.AxisX.Interval = 0.0;
             chartArea.AxisX.LabelStyle.Format = "{hh:mm:ss}";
             chartArea.AxisX.MajorGrid.LineColor = Color.LightGray;
-            chartArea.AxisY.Title = yAxisTitle;
+            chartArea.AxisY.Title = _chartConfig.Counter;
             chartArea.AxisY.TitleFont = font;
-            chartArea.AxisY.Maximum = 100.0;
-            chartArea.AxisY.Interval = 10.0;
+            chartArea.AxisY.Maximum = _chartConfig.Scale;
+            chartArea.AxisY.Interval = _chartConfig.Interval;
             chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
             _chart.ChartAreas.Add(chartArea);
 
@@ -45,8 +47,8 @@ namespace PerfRoleGraphing.Charting
             series.XValueType = ChartValueType.DateTime;
             series.YValueType = ChartValueType.Double;
 
-
             int i = 0;
+
             foreach (var rec in records)
             {                
                 if (i++ % 5 == 0) 
@@ -57,11 +59,11 @@ namespace PerfRoleGraphing.Charting
             _chart.Series.Add(series);
         }
 
-        public void SaveChart(string outpath)
+        public void SaveChart()
         {
             if (_chart != null)
             {
-                using (var filewriter = new FileStream(outpath, FileMode.Create))
+                using (var filewriter = new FileStream(_chartConfig.OutFile, FileMode.Create))
                 {
                     _chart.SaveImage(filewriter, ChartImageFormat.Png);
                 };

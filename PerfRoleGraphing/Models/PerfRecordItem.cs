@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PerfRoleGraphing.Models
 {
-    public class PerfRecordItem
+    internal class PerfRecordItem
     {
         public DateTime TimeStamp { get; set; }
         public double Value { get; set; }
