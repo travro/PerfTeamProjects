@@ -42,7 +42,7 @@ namespace PerfRoleGraphing.CSVManagement
            
             foreach(var rec in records)
             {
-                rec.Value /= 1000000.0;
+                rec.Value /= 10000000.0;
             }
             return records;
         }

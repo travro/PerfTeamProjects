@@ -36,8 +36,8 @@ namespace PerfConsoleApp
                     OutFile = @"C:\Users\tsmelvin\Desktop\PR-UUD43_ram.jpeg",
                     Role = "PR-UUD43",
                     Counter = @"Memory\Committed MBytes",
-                    Scale = 32770.0,
-                    Interval = 2000.0,
+                    Scale = 3277.0,
+                    Interval = 200.0,
                     FullLoadTime = 40
                 };
 

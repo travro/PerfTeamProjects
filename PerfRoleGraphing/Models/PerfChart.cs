@@ -33,7 +33,7 @@ namespace PerfRoleGraphing.Models
 
             var chartArea = new ChartArea();    
             chartArea.AxisX.TitleFont = font;
-            chartArea.AxisX.LabelStyle.Format = "{hh:mm:ss}";
+            chartArea.AxisX.LabelStyle.Format = "{H:mm:ss}";
             chartArea.AxisX.MajorGrid.LineColor = Color.LightGray;
             chartArea.AxisY.Title = _chartConfig.Counter;
             chartArea.AxisY.TitleFont = font;
