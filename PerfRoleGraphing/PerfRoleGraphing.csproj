@@ -74,10 +74,8 @@
     <Compile Include="ChartMaker.cs" />
     <Compile Include="CSVManagement\RecordSelector.cs" />
     <Compile Include="Models\ChartConfiguration.cs" />
-    <Compile Include="Models\ClassMaps\ComBytesClassMap.cs" />
     <Compile Include="Models\PerfRecordItem.cs" />
     <Compile Include="Models\PerfRecordMap.cs" />
-    <Compile Include="Models\ClassMaps\TotalProcessClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

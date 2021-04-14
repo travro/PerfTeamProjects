@@ -44,19 +44,5 @@ namespace PerfRoleGraphing.CSVManagement
                 }
             }
         }
-        public IEnumerable<PerfRecordItem> GetTotalProcessorTime()
-        {
-            return GetFullTestRecords<TotalProcessClassMap>();
-        }
-        public IEnumerable<PerfRecordItem> GetCommittedMemoryBytes()
-        {            
-            var records =  GetFullTestRecords<ComBytesClassMap>();
-           
-            foreach(var rec in records)
-            {
-                rec.Value /= 10000000.0;
-            }
-            return records;
-        }
     }
 }
