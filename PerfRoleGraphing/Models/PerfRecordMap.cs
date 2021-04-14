@@ -8,19 +8,19 @@ using CsvHelper.TypeConversion;
 
 namespace PerfRoleGraphing.Models
 {
-    internal abstract class PerfRecordMap : ClassMap<PerfRecordItem>
+    internal class PerfRecordMap : ClassMap<PerfRecordItem>
     {
-        public PerfRecordMap(int index)
+        public PerfRecordMap(string name)
         {
             Map(member => member.TimeStamp)
                 .Index(0)
                 .TypeConverter<DateTimeConverter>();
             Map(member => member.Value)
-                .Index(index)
+                .Name(name)
                 .Default(0.0)
                 .Convert(d =>
                 {
-                    if (Double.TryParse(d.Row.GetField(index), out double result))
+                    if (Double.TryParse(d.Row.GetField(name), out double result))
                     {
                         return result;
                     }

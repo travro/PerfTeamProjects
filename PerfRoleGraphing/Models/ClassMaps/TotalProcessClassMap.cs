@@ -8,6 +8,6 @@ namespace PerfRoleGraphing.Models.ClassMaps
 {
     internal class TotalProcessClassMap : PerfRecordMap
     {
-        public TotalProcessClassMap() : base(175) { }
+        public TotalProcessClassMap() : base(@"Processor(_Total)\% Processor Time") { }
     }
 }

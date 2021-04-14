@@ -32,6 +32,18 @@ namespace PerfRoleGraphing.CSVManagement
             }
         }
         public RecordSelector(string filePath) { _filepath = filePath; }
+
+        public IEnumerable<PerfRecordItem> GetFullTestRecords(PerfRecordMap map)
+        {
+            using (var reader = new StreamReader(_filepath))
+            {
+                using (var csvReader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
+                {
+                    csvReader.Context.RegisterClassMap(map);
+                    return csvReader.GetRecords<PerfRecordItem>().ToList();
+                }
+            }
+        }
         public IEnumerable<PerfRecordItem> GetTotalProcessorTime()
         {
             return GetFullTestRecords<TotalProcessClassMap>();

@@ -8,6 +8,6 @@ namespace PerfRoleGraphing.Models.ClassMaps
 {
     internal class ComBytesClassMap : PerfRecordMap
     {
-        public ComBytesClassMap() : base(186) { }
+        public ComBytesClassMap() : base(@"Memory\Committed MBytes") { }
     }
 }

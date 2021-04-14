@@ -34,6 +34,9 @@ namespace PerfRoleGraphing
             MakeChart();
         }
 
+        // \\PR-UUW23A\.NET CLR Memory(_Global_)\# Total committed Bytes
+        // \\PR-UUD23\Memory\Committed Bytes
+
         private void SelectRecords()
         {
             if (_configurationComplete)
@@ -42,11 +45,19 @@ namespace PerfRoleGraphing
 
                 if (_configuration.Counter.Contains("Processor"))
                 {
-                    _records = _selector.GetTotalProcessorTime();
+                    //_records = _selector.GetTotalProcessorTime();
+                    //var map = new PerfRecordMap($"\\\\{_configuration.Role}\\Processor(_Total)\\% Processor Time");
+                    _records = _selector.GetFullTestRecords(new PerfRecordMap($"\\\\{_configuration.Role}\\Processor(_Total)\\% Processor Time"));
                 }
                 else if(_configuration.Counter.Contains("Memory"))
                 {
-                    _records = _selector.GetCommittedMemoryBytes();
+                    //_records = _selector.GetCommittedMemoryBytes();
+                    _records = _selector.GetFullTestRecords(new PerfRecordMap($"\\\\{_configuration.Role}\\Memory\\Committed Bytes"));
+
+                    foreach (var rec in _records)
+                    {
+                        rec.Value /= 10000000.0;
+                    }
                 }
                 else
                 {

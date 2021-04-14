@@ -18,38 +18,39 @@ namespace PerfConsoleApp
             {
                 var chartConfiguration1 = new ChartConfiguration() 
                 {
-                    File = @"C:\Users\tsmelvin\Desktop\PR-UUD43.csv",
-                    OutFile = @"C:\Users\tsmelvin\Desktop\PR-UUD43_cpu.jpeg",
-                    Role = "PR-UUD43",
+                    File = @"C:\Users\tsmelvin\Desktop\PR-UUW47F.csv",
+                    OutFile = @"C:\Users\tsmelvin\Desktop\PR-UUW47F_cpu.png",
+                    Role = "PR-UUW47F",
                     Counter = @"Processor(_Total)\% Processor Time",
                     Scale = 100.0,
                     Interval = 10.0,
-                    FullLoadTime = 40
+                    FullLoadTime = 30
                 };
 
                 var chartMaker = new ChartMaker(chartConfiguration1);
                 chartMaker.SaveChart();
                 
-                var chartConfiguration2 = new ChartConfiguration()
+              /* var chartConfiguration2 = new ChartConfiguration()
                 {
-                    File = @"C:\Users\tsmelvin\Desktop\PR-UUD43.csv",
-                    OutFile = @"C:\Users\tsmelvin\Desktop\PR-UUD43_ram.jpeg",
-                    Role = "PR-UUD43",
+                    File = @"C:\Users\tsmelvin\Desktop\PR-UUD23.csv",
+                    OutFile = @"C:\Users\tsmelvin\Desktop\PR-UUD23_ram.png",
+                    Role = "PR-UUD23",
                     Counter = @"Memory\Committed MBytes",
                     Scale = 3277.0,
                     Interval = 200.0,
-                    FullLoadTime = 40
+                    FullLoadTime = 30
                 };
 
                 chartMaker = new ChartMaker(chartConfiguration2);
-                chartMaker.SaveChart();
+                chartMaker.SaveChart();*/
 
 
-                //Console.ReadLine();
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                Console.ReadLine();
             }
         }
     }
