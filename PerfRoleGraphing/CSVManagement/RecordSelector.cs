@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CsvHelper;
-using CsvHelper.Configuration;
-using CsvHelper.TypeConversion;
 using PerfRoleGraphing.Models;
-using PerfRoleGraphing.Models.ClassMaps;
 
 
 namespace PerfRoleGraphing.CSVManagement

@@ -18,9 +18,9 @@ namespace PerfConsoleApp
             {
                 var chartConfiguration1 = new ChartConfiguration() 
                 {
-                    File = @"C:\Users\tsmelvin\Desktop\PR-UUW47F.csv",
-                    OutFile = @"C:\Users\tsmelvin\Desktop\PR-UUW47F_cpu.png",
-                    Role = "PR-UUW47F",
+                    File = @"C:\Users\tsmelvin\Desktop\PR-UUD46.csv",
+                    OutFile = @"C:\Users\tsmelvin\Desktop\UUD-46.png",
+                    Role = "PR-UUD46",
                     Counter = @"Processor(_Total)\% Processor Time",
                     Scale = 100.0,
                     Interval = 10.0,
