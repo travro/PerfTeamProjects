@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfRoleGraphing", "PerfRol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfConsoleApp", "PerfConsoleApp\PerfConsoleApp.csproj", "{9E64FB33-9CD0-43C1-A88E-579AC8AA9579}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfRepoTabler", "..\PerfRepoTabler.SLN\PerfRepoTabler\PerfRepoTabler.csproj", "{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfRepoTabler", "PerfRepoTabler\PerfRepoTabler.csproj", "{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
