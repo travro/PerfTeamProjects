@@ -22,9 +22,10 @@ namespace PerfConsoleApp
                     OutFile = @"C:\Users\tsmelvin\Desktop\UUD-46.png",
                     Role = "PR-UUD46",
                     Counter = @"Processor(_Total)\% Processor Time",
+                    YAxis = "CPU Time",
                     Scale = 100.0,
                     Interval = 10.0,
-                    FullLoadTime = 30
+                    FullLoadTime = 40
                 };
 
                 var chartMaker = new ChartMaker(chartConfiguration1);

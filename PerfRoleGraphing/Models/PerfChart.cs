@@ -19,10 +19,10 @@ namespace PerfRoleGraphing.Models
             _chartConfig = configuration;
             _chart = new Chart();
 
-            var font = new Font("Arial", 14, FontStyle.Bold);
+            var font = new Font("Arial", 14, FontStyle.Regular);
             _chart.ClientSize = new Size(1900, 800);
 
-            var titleText = $"{_chartConfig.Role} at Highest Concurrency";
+            var titleText = $"{_chartConfig.Role} {_chartConfig.Counter}";
 
             var title = new Title()
             {
@@ -35,7 +35,7 @@ namespace PerfRoleGraphing.Models
             chartArea.AxisX.TitleFont = font;
             chartArea.AxisX.LabelStyle.Format = "{H:mm:ss}";
             chartArea.AxisX.MajorGrid.LineColor = Color.LightGray;
-            chartArea.AxisY.Title = _chartConfig.Counter;
+            chartArea.AxisY.Title = _chartConfig.YAxis;
             chartArea.AxisY.TitleFont = font;
             chartArea.AxisY.Maximum = _chartConfig.Scale;
             chartArea.AxisY.Interval = _chartConfig.Interval;
@@ -51,7 +51,7 @@ namespace PerfRoleGraphing.Models
 
             foreach (var rec in records)
             {                
-                if (i++ % 5 == 0) 
+                if (i++ % 2 == 0) 
                 {
                     series.Points.AddXY(rec.TimeStamp, rec.Value);
                 }

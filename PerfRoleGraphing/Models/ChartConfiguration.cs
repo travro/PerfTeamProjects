@@ -15,6 +15,7 @@ namespace PerfRoleGraphing.Models
         public string Role { get; set; }
         public string OutFile { get; set; }
         public string Counter { get; set; }
+        public string YAxis { get; set; }
         public double Scale { get; set; }
         public double Interval { get; set; }
         public int FullLoadTime { get; set; }
