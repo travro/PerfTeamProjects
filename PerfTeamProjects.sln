@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfRepoTabler", "..\PerfRepoTabler.SLN\PerfRepoTabler\PerfRepoTabler.csproj", "{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfRoleGraphing", "PerfRoleGraphing\PerfRoleGraphing.csproj", "{09790FFD-D073-47C3-A7D9-707CE8597968}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfConsoleApp", "PerfConsoleApp\PerfConsoleApp.csproj", "{9E64FB33-9CD0-43C1-A88E-579AC8AA9579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfRepoTabler", "..\PerfRepoTabler.SLN\PerfRepoTabler\PerfRepoTabler.csproj", "{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09790FFD-D073-47C3-A7D9-707CE8597968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09790FFD-D073-47C3-A7D9-707CE8597968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09790FFD-D073-47C3-A7D9-707CE8597968}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{9E64FB33-9CD0-43C1-A88E-579AC8AA9579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E64FB33-9CD0-43C1-A88E-579AC8AA9579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E64FB33-9CD0-43C1-A88E-579AC8AA9579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1FC5CE-A7AA-4243-B4EB-5A0233F0E8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

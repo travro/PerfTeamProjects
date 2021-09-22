@@ -50,10 +50,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PerfRepoTabler.SLN\PerfRepoTabler\PerfRepoTabler.csproj">
-      <Project>{cf1fc5ce-a7aa-4243-b4eb-5a0233f0e8c5}</Project>
-      <Name>PerfRepoTabler</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PerfRoleGraphing\PerfRoleGraphing.csproj">
       <Project>{09790ffd-d073-47c3-a7d9-707ce8597968}</Project>
       <Name>PerfRoleGraphing</Name>
